@@ -155,6 +155,7 @@ ALTER TABLE price ADD CONSTRAINT PK_price PRIMARY KEY (cost_id);
 
 DROP TABLE IF EXISTS time_available CASCADE;
 CREATE TABLE time_available (
+ time_id INT GENERATED ALWAYS AS IDENTITY NOT NULL,
  instructor_id INT NOT NULL,
  available_time_slot_start TIMESTAMP(10) NOT NULL,
  available_time_slot_end TIMESTAMP(10) NOT NULL,
@@ -162,7 +163,7 @@ CREATE TABLE time_available (
  instrument_type_id INT NOT NULL
 );
 
-ALTER TABLE time_available ADD CONSTRAINT PK_time_available PRIMARY KEY (instructor_id);
+ALTER TABLE time_available ADD CONSTRAINT PK_time_available PRIMARY KEY (time_id);
 
 
 DROP TABLE IF EXISTS ensemble CASCADE;
