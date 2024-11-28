@@ -91,7 +91,7 @@ GROUP BY
 
 
 
--- Task 4: 
+-- For part 4: 
 
 --      Materialized view: For each ensemble lesson, lists the time, the genre, the max allowed students and the lesson ID.
 DROP VIEW IF EXISTS ensemble_lessons;
