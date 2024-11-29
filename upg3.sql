@@ -83,7 +83,36 @@ GROUP BY
 
 
 
+--      FOR CREATING MORE TEST DATA FOR QUERY 3
+INSERT INTO lesson (time, instructor_id, cost_id) VALUES
+('2024-11-29 19:10:25-07', 3, 1),
+('2024-11-30 18:10:25-07', 3, 1),
+('2024-12-01 17:10:25-07', 3, 1);
 
+-- Test if new data is present
+SELECT time, TO_CHAR(time, 'Dy') AS "Day"
+FROM lesson
+WHERE lesson_id >= 101
+ORDER BY lesson_id ASC;
+
+
+INSERT INTO ensemble VALUES
+(107, 3, 1),
+(108, 4, 1),
+(109, 2, 1);
+
+INSERT INTO target_genre VALUES
+('Jazz', 107),
+('Jazz', 108),
+('Rock', 109);
+
+
+INSERT INTO student_lesson VALUES
+(1, 107),
+(2, 107),
+(3, 108),
+(4, 109),
+(5, 109);
 
 
 
